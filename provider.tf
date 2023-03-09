@@ -1,5 +1,5 @@
 provider "aws" {
-  region     = "${aws_region}"
-  access_key = "${aws_access_key}"
-  secret_key = "${aws_secret_key}"
+  region     = lookup(var.env,"aws_region")
+  access_key = lookup(var.env,"aws_access_key")
+  secret_key = lookup(var.env,"aws_secret_key")
 }
